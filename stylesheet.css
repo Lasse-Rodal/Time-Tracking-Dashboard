@@ -1,0 +1,327 @@
+/* 
+Colors 
+*/
+:root {
+    --profile-card-purple: hsl(246, 80%, 60%);
+    --bg-light-red-work: hsl(15, 100%, 70%);
+    --bg-soft-blue-play: hsl(195, 74%, 62%);
+    --bg-light-red-study: hsl(348, 100%, 68%);
+    --bg-lime-green-exercise: hsl(145, 58%, 55%);
+    --bg-violet-social: hsl(264, 64%, 52%);
+    --bg-soft-orange-self-care: hsl(43, 84%, 65%);
+    --body-bg: hsl(226, 43%, 10%);
+    --card-bg: hsl(235, 46%, 20%);
+    --card-bg-hover: hsl(235, 45%, 61%);
+    --txt-pale-blue: hsl(236, 100%, 87%);
+    }
+/* 
+Typography 
+*/
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    flex: 1 1 50%;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--txt-pale-blue);
+    margin: 0;
+}
+
+/* 
+Main 
+*/
+body {
+    background-color: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    max-width: 800px;
+    margin: 48px;
+}
+
+.profile {
+    background-color: var(--profile-card-purple);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+    z-index: 1;
+    position: relative;
+}
+
+.side-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    min-height: 300px;
+    position: relative;
+}
+
+.profile-text {
+    margin: 0;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 100vw;
+    border: 2px solid white;
+    margin-bottom: 32px;   
+}
+
+.side-container-bottom {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 16px;
+    padding: 16px 16px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    margin-top: 0;
+    z-index: 0;
+    justify-items: start;
+    align-content: start;
+    position: relative;
+}
+
+.button {
+    font: inherit;
+    background: inherit;
+    border: none;
+    color: var(--txt-pale-blue);
+    flex: auto;
+    border-radius: 8px;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.button:hover {
+    color: white;
+}
+
+button.active {
+    color: white;
+}
+
+.timecards-section {
+    flex-grow: 1;
+    margin-left: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 24px;
+}
+
+.cards-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    color: white;
+    padding: 16px;
+    position: relative;
+    margin-top: 14px;
+    height: 130px;
+}
+
+.timecard-header {
+    height: 60px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    transform: translateY(-30px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.cards-container:hover .timecard-header {
+    transform: translateY(-40px);
+}
+
+.cards-container .timecard-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timecard-top {
+    align-items: center;
+    z-index: 0;
+    top: 50px;
+}
+
+.icon {
+    position: absolute;
+    top: -12px;
+    right: 8px;
+    margin-left: auto;
+}
+
+.timecard-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.button:hover,
+.cards-container .timecard-top img:hover {
+    cursor: pointer;
+}
+
+.cards-container:hover {
+    background-color: var(--card-bg-hover);
+}
+
+.work {
+    background-color: var(--bg-light-red-work);
+}
+
+.play {
+    background-color: var(--bg-soft-blue-play);
+}
+
+.study {
+    background-color: var(--bg-light-red-study);
+}
+
+.exercise {
+    background-color: var(--bg-lime-green-exercise);
+}
+
+.social {
+    background-color: var(--bg-violet-social);
+}
+
+.self-care {
+    background-color: var(--bg-soft-orange-self-care);
+}
+
+/* 
+Mobile View 
+*/
+
+@media (max-width: 600px) {
+    .container {
+        display: block;
+        flex-direction: column;
+        margin: 16px;
+        max-width: 300px;
+    }
+
+    .side-container {
+        width: 100%;
+        margin: 0 auto 16px auto;
+        min-height: 100px;
+    }
+
+
+    .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .avatar {
+        margin-bottom: 0;
+    }
+
+    .profile-text {
+        margin: 0 0 0 20px;
+    }
+
+    .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    }
+
+    .name {
+        white-space: nowrap;
+    }
+
+    .side-container-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .timecards-section {
+        display: block;
+        width: 100%;
+        margin: 32px auto;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .cards-container {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: var(--card-bg);
+        margin: 0 0 50px;
+    }
+
+    .timecard-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+/* 
+Attribution 
+*/
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: whitesmoke;
+}
+
+.attribution a { 
+    color: white; 
+}
