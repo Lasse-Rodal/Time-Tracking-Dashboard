@@ -11,7 +11,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#Continued-development)
 - [Author](#author)
 
 ## Overview
@@ -28,52 +27,49 @@ Users should be able to:
 
 <details>
   <summary>Desktop version</summary>
-  <img src="./media/screenshots/desktop_view.png" alt="Desktop version" width="600"/>
+  <img src="./media/screenshots/desktop-view.png" alt="Desktop version" width="600"/>
 </details>
 
 <details>
   <summary>Mobile version</summary>
-  <img src="./media/screenshots/mobile_view.png" alt="Mobile version" width="300"/>
+  <img src="./media/screenshots/mobile-view.png" alt="Mobile version" width="300"/>
 </details>
 
 <details>
   <summary>Active version</summary>
-  <img src="./media/screenshots/active_view.png" alt="Active version" width="300"/>
+  <img src="./media/screenshots/active-view.png" alt="Active version" width="300"/>
 </details>
 
 ### Links
 
-- [Solution URL:](https://github.com/Lasse-Rodal/advice-generator-app)
-- [Live Site URL:](https://lasse-rodal.github.io/advice-generator-app/)
+- [Solution URL:](https://github.com/Lasse-Rodal/Time-Tracking-Dashboard)
+- [Live Site URL:](https://lasse-rodal.github.io/Time-Tracking-Dashboard/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Grid Layout
+HTML:
+- Semantic elements and structured layout
+- Buttons for user interaction
+- Fetching data from an external JSON file
+
+CSS:
+- CSS Custom Properties
 - Flexbox
-- Mobile-first workflow
-- JavaScript
-- Fetch API - For API calls
-- Google Fonts - For typography
-- Hover effects
-- CSS transitions
+- Grid Layout
+- Media Queries
+- Button States
+- Card Hover Effects
+
+JavaScript:
+- Fetch API
+- DOM Manipulation
+- Event Listeners
 
 ### What I learned
 
-I learned how to create a responsive time-tracking dashboard using HTML, CSS, and JavaScript, with dynamic data fetching and interactive UI elements. I also experimented with using the `inherit` value for font properties and other styles.
-
-### Continued development
-
-Potential future development:
-
-- Add dark/light mode toggle
-- Implement real-time data updates
-- Improve accessibility (e.g., keyboard navigation, ARIA labels)
-- Add user customization options (e.g., theme, layout)
-- Optimize performance for large datasets
+I learned how to build a dynamic and interactive dashboard using HTML, CSS, and JavaScript, including techniques like fetch API for data fetching, CSS Grid, and Flexbox for layout, and creating responsive designs with mobile-first practices.
 
 ## Author
 
